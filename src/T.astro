@@ -1,0 +1,15 @@
+---
+// Server-translated text, tagged so bindGettext() can switch it on the client.
+// ponytail: singular only; use useGettext(Astro)._n() for plurals.
+import { useGettext } from "@rgglez/astro-i18n-gettext";
+
+interface Props {
+  msgid: string;
+  /** gettext context; defaults to `app`. */
+  ctx?: string;
+}
+const { msgid, ctx = "app" } = Astro.props;
+const { _ } = useGettext(Astro);
+---
+
+<span data-msgid={msgid} data-msgctxt={ctx}>{_(msgid, ctx)}</span>

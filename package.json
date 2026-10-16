@@ -1,0 +1,45 @@
+{
+  "name": "@rgglez/astro-i18n-gettext",
+  "version": "0.1.0",
+  "description": "Translations (i18n) for Astro using gettext: per-request translator, <T> component, and client-side language switching.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./T.astro": "./src/T.astro"
+  },
+  "files": [
+    "dist",
+    "src/T.astro"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test src",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "astro",
+    "astro-component",
+    "i18n",
+    "gettext",
+    "translation"
+  ],
+  "author": "Rodolfo González González",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgglez/astro-i18n-gettext.git"
+  },
+  "dependencies": {
+    "@rgglez/i18n-gettext": "^0.1.0"
+  },
+  "peerDependencies": {
+    "astro": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
+  }
+}
