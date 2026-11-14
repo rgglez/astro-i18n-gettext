@@ -1,0 +1,58 @@
+---
+import "../../i18n";
+import { sprintf, useGettext } from "@rgglez/astro-i18n-gettext";
+import T from "@rgglez/astro-i18n-gettext/T.astro";
+
+const languages = { en: "English", es: "Español", fr: "Français" };
+
+export function getStaticPaths() {
+  return ["en", "es", "fr"].map(lang => ({ params: { lang } }));
+}
+
+// No Astro i18n config here, so the language comes from the [lang] param.
+const { _, _n, lang } = useGettext(Astro);
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <title>{_("Astro gettext example")}</title>
+  </head>
+  <body>
+    <nav>
+      <!-- Relative links work under any base path. -->
+      <a href="./"><T msgid="Home" ctx="nav" /></a> |
+      {Object.entries(languages).map(([code, name]) => <a href={`../${code}/`}>{name}</a> )}
+    </nav>
+
+    <h1><T msgid="Hello, world!" /></h1>
+    <p><T msgid="This text is translated on the server and again on the client." /></p>
+
+    <label>
+      <T msgid="Switch language without reloading:" />
+      <select id="lang">
+        {Object.entries(languages).map(([code, name]) => (
+          <option value={code} selected={code === lang}>{name}</option>
+        ))}
+      </select>
+    </label>
+
+    <h2>{_("Server-only strings (plurals, title):")}</h2>
+    <ul>
+      {[0, 1, 5].map(n => <li>{sprintf(_n("%d apple", "%d apples", n), n)}</li>)}
+    </ul>
+
+    <script>
+      import { bindGettext, createGettextStore } from "@rgglez/astro-i18n-gettext";
+      import { catalogs } from "../../i18n";
+
+      const html = document.documentElement;
+      const store = createGettextStore({ lang: html.lang, catalogs });
+      bindGettext(document, store);
+      document.querySelector("#lang")!.addEventListener("change", event => {
+        html.lang = (event.target as HTMLSelectElement).value;
+        store.setLang(html.lang);
+      });
+    </script>
+  </body>
+</html>

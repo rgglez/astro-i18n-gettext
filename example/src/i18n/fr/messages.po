@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Language: fr\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgctxt "app"
+msgid "Astro gettext example"
+msgstr "Exemple de gettext avec Astro"
+
+msgctxt "app"
+msgid "Hello, world!"
+msgstr "Bonjour, le monde !"
+
+msgctxt "app"
+msgid "This text is translated on the server and again on the client."
+msgstr "Ce texte est traduit sur le serveur puis sur le client."
+
+msgctxt "app"
+msgid "Switch language without reloading:"
+msgstr "Changer de langue sans recharger :"
+
+msgctxt "app"
+msgid "Server-only strings (plurals, title):"
+msgstr "Chaînes du serveur uniquement (pluriels, titre) :"
+
+msgctxt "app"
+msgid "%d apple"
+msgid_plural "%d apples"
+msgstr[0] "%d pomme"
+msgstr[1] "%d pommes"
+
+msgctxt "nav"
+msgid "Home"
+msgstr "Accueil"

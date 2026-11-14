@@ -1,0 +1,73 @@
+{
+  "charset": "utf-8",
+  "headers": {
+    "Language": "fr",
+    "Content-Type": "text/plain; charset=UTF-8",
+    "Plural-Forms": "nplurals=2; plural=(n > 1);"
+  },
+  "translations": {
+    "": {
+      "": {
+        "msgid": "",
+        "msgstr": [
+          "Language: fr\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n > 1);\n"
+        ]
+      }
+    },
+    "app": {
+      "Astro gettext example": {
+        "msgid": "Astro gettext example",
+        "msgctxt": "app",
+        "msgstr": [
+          "Exemple de gettext avec Astro"
+        ]
+      },
+      "Hello, world!": {
+        "msgid": "Hello, world!",
+        "msgctxt": "app",
+        "msgstr": [
+          "Bonjour, le monde !"
+        ]
+      },
+      "This text is translated on the server and again on the client.": {
+        "msgid": "This text is translated on the server and again on the client.",
+        "msgctxt": "app",
+        "msgstr": [
+          "Ce texte est traduit sur le serveur puis sur le client."
+        ]
+      },
+      "Switch language without reloading:": {
+        "msgid": "Switch language without reloading:",
+        "msgctxt": "app",
+        "msgstr": [
+          "Changer de langue sans recharger :"
+        ]
+      },
+      "Server-only strings (plurals, title):": {
+        "msgid": "Server-only strings (plurals, title):",
+        "msgctxt": "app",
+        "msgstr": [
+          "Chaînes du serveur uniquement (pluriels, titre) :"
+        ]
+      },
+      "%d apple": {
+        "msgid": "%d apple",
+        "msgctxt": "app",
+        "msgid_plural": "%d apples",
+        "msgstr": [
+          "%d pomme",
+          "%d pommes"
+        ]
+      }
+    },
+    "nav": {
+      "Home": {
+        "msgid": "Home",
+        "msgctxt": "nav",
+        "msgstr": [
+          "Accueil"
+        ]
+      }
+    }
+  }
+}
