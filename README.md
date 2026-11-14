@@ -123,6 +123,12 @@ bun test src
 bun run build
 ```
 
+## Live example
+
+The component can be viewed live [here](https://rgglez.github.io/astro-i18n-gettext/).
+
+You can run it locally from the `example` directory.
+
 ## License
 
 Copyright (c) 2026 Rodolfo González González.

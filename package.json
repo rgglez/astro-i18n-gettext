@@ -33,7 +33,7 @@
     "url": "git+https://github.com/rgglez/astro-i18n-gettext.git"
   },
   "dependencies": {
-    "@rgglez/i18n-gettext": "^0.1.0"
+    "@rgglez/i18n-gettext": "^0.1.1"
   },
   "peerDependencies": {
     "astro": ">=4.0.0"
